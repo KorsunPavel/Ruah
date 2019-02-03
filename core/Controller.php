@@ -7,7 +7,7 @@ class Controller  extends Application
         parent::__construct();
         $this->_contoller = $contoller;
         $this->_action = $action;
-        $view = new View();
+        $this->view = new View();
     }
 
 }

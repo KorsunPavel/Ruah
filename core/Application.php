@@ -18,7 +18,7 @@
             }
         }
         private function _unregisterd_globals(){
-               if(ini_get('tegister_globals')){
+               if(ini_get('register_globals')){
                    $globalAry = ['_SESSION', '_COOKIE', '_POST', '_GET', '_REQUEST', '_SERVER', '_ENV', '_FILES'];
                    foreach ($globalAry as $global){
                        foreach ($GLOBALS[$global] as $key => $value) {

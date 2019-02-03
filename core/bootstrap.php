@@ -7,10 +7,10 @@ require_once(ROOT . DS . 'app' . DS . 'lib'  . DS .  'helpers'  . DS .  'functio
 function __autoload($classname){
     if(file_exists(ROOT .DS. 'core' . DS . $classname.'.php')){
         require_once(ROOT . DS . 'core' . DS . $classname.'.php');
-    } elseif(file_exists(ROOT . DS . 'controllers' . DS . $classname.'.php') ) {
-        require_once(ROOT . DS . 'controllers' . DS . $classname.'.php');
-    } elseif(file_exists(ROOT . DS . 'models' . DS . $classname.'.php') ) {
-        require_once(ROOT . DS . 'models ' . DS . $classname.'.php');
+    } elseif(file_exists(ROOT . DS . 'app' . DS . 'controllers' . DS . $classname.'.php') ) {
+        require_once(ROOT . DS . 'app' . DS . 'controllers' . DS . $classname.'.php');
+    } elseif(file_exists(ROOT . DS . 'app' . DS . 'models' . DS . $classname.'.php') ) {
+        require_once(ROOT . DS . 'app' . DS . 'models ' . DS . $classname.'.php');
     }
 }
 
