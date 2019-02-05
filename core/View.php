@@ -2,9 +2,7 @@
 class View
 {
     protected $_head, $_body, $_siteTitle = SITE_TITLE, $_outputBuffer, $_layout = DEFAULT_LAYOUT;
-
     public function __construct()  {
-        
     }
 
     public function render($viewName){
@@ -12,7 +10,7 @@ class View
         $viewString = implode(DS, $viewAry);
         if(file_exists(ROOT . DS . 'app' . DS . 'views' . DS .$viewString . '.php')){
             include(ROOT . DS . 'app' . DS . 'views' . DS .$viewString . '.php');
-           // include(ROOT . DS . 'app' . DS . 'views' . DS . 'layouts' . DS . $this->_layout . '.php');
+            include(ROOT . DS . 'app' . DS . 'views' . DS . 'layouts' . DS . $this->_layout . '.php');
         }else{
             die("The view \" {$viewName} \" does not exist.");
         }
@@ -38,7 +36,7 @@ class View
             $this->_body = ob_get_clean();
         }
         else{
-            die('YOu must first run the start method.');
+            die('You must first run the start method.');
         }
     }
 

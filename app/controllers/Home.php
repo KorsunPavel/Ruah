@@ -5,9 +5,8 @@
         public function __construct($controller, $action) {
             parent::__construct($controller, $action);
         }
-        public function indexAction($name)
+        public function indexAction()
         {
-            echo $name;
             $this->view->render('home/index');
         }
     }
